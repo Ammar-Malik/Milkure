@@ -12,6 +12,7 @@ import { PROMOTIONS } from '../shared/promotions';
 import { LEADERS } from '../shared/leaders';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
+
 class Main extends Component {
 
   constructor(props) {
