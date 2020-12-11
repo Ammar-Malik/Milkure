@@ -6,6 +6,18 @@ import About from './AboutComponent';
 import DishDetail from './DishdetailComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
+import Others from './OthersComponent';
+import Signup from './SignupComponent';
+import Profile from './ProfileComponent';
+import DMain from './DMainComponent';
+import CSMain from './CSMainComponent';
+import Vendor from './VendorComponent';
+import MDashboard from '../milkureComponents/MDashboardComponent';
+import Add from '../milkureComponents/AddComponent';
+import Customers from '../milkureComponents/CustomerComponent';
+import StaffandVendor from '../milkureComponents/StaffandVendorComponent';
+import AssignCustomers from '../milkureComponents/AssignCustomersComponent';
+import AssignVendors from '../milkureComponents/AssignVendorsComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { addComment } from '../redux/ActionCreators';
@@ -60,6 +72,18 @@ class Main extends Component {
               <Route path='/menu/:dishId' component={DishWithId} />
               <Route exact path='/aboutus' component={() => <About leaders={this.props.leaders} />} /> 
               <Route exact path='/contactus' component={Contact} />
+              <Route path='/order' component={Others} />
+              <Route path='/signup' component={Signup} />
+              <Route path='/profile' component={Profile} />
+              <Route path='/dmain' component={DMain} />
+              <Route path='/csmain' component={CSMain} />
+              <Route path='/vendor' component={Vendor} />
+              <Route path='/mdashboard' component={MDashboard} />
+              <Route path='/add' component={Add} />
+              <Route path='/customers' component={Customers} />
+              <Route path='/staffandvendor' component={StaffandVendor} />
+              <Route path='/assigncustomers' component={AssignCustomers} />
+              <Route path='/assignvendors' component={AssignVendors} />
               <Redirect to="/home" />
         </Switch>
         <Footer/>
